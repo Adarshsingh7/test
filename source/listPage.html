@@ -12,51 +12,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
   </head>
-  <style>
-    button,
-    button:link,
-    button:visited {
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 1.5rem 4rem;
-      display: inline-block;
-      border-radius: 10rem;
-      -webkit-transition: all 0.2s;
-      transition: all 0.2s;
-      position: relative;
-      font-size: 1.6rem;
-      border: none;
-      cursor: pointer;
-    }
-
-    button:hover {
-      -webkit-transform: translateY(-3px);
-      transform: translateY(-3px);
-      -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    }
-
-    button:hover::after {
-      -webkit-transform: scaleX(1.4) scaleY(1.6);
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0;
-    }
-
-    button:active,
-    button:focus {
-      outline: none;
-      -webkit-transform: translateY(-1px);
-      transform: translateY(-1px);
-      -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    }
-    .btn--animated {
-      -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
-      animation: moveInBottom 0.5s ease-out 0.75s;
-      -webkit-animation-fill-mode: backwards;
-      animation-fill-mode: backwards;
-    }
-  </style>
   <body class="bg-gray-100">
     <header class="p-4 shadow-md bg-gray-100 z-10">
       <nav class="mx-auto flex justify-between items-center">
@@ -115,7 +70,7 @@
               class="w-[100%] rounded-xl p-4 h-14 border"
               type="text" />
             <button
-              class="bg-green-500 hover:bg-green-600 p-2 text-white absolute right-[2%] top-[12%] rounded-2xl btn--animated"
+              class="bg-green-500 hover:bg-green-600 p-2 text-white absolute right-[2%] top-[12%] rounded-2xl"
               type="submit">
               search
             </button>
