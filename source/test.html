@@ -1,0 +1,75 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Card Rotation on Hover</title>
+  </head>
+  <body>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        perspective: 1000px; /* Add perspective for better 3D effect */
+      }
+
+      .card {
+        width: 200px;
+        height: 300px;
+        position: relative;
+        transform-style: preserve-3d; /* Maintain 3D transformations */
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: rotateY(180deg);
+      }
+
+      .card-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+
+      .card-front {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+      }
+
+      .card-back {
+        background-color: #e0e0e0;
+        border: 1px solid #bbb;
+        transform: rotateY(
+          180deg
+        ); /* Initially rotated to hide the back face */
+      }
+
+      .card-content {
+        padding: 20px;
+      }
+    </style>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="card-content">
+            <h2>Card Front</h2>
+            <p>This is the front of the card.</p>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="card-content">
+            <h2>Card Back</h2>
+            <p>This is the back of the card with additional data.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
